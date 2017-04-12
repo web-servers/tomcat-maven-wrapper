@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.apache.tomcat</groupId>
+  <artifactId>tomcat-parent</artifactId>
+  <version>8.5.13</version>
+  <packaging>pom</packaging>
+
+  <name>Apache Tomcat Parent</name>
+  <description>Maven wrapper for Tomcat's ant project</description>
+  <url>http://tomcat.apache.org/</url>
+
+  <organization>
+    <name>Apache Software Foundation</name>
+    <url>http://apache.org</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <mailingLists>
+    <mailingList>
+      <name>tomcat-dev</name>
+      <subscribe>http://tomcat.apache.org/lists.html#tomcat-dev</subscribe>
+      <unsubscribe>http://tomcat.apache.org/lists.html#tomcat-dev</unsubscribe>
+      <post>dev@tomcat.apache.org</post>
+      <archive>http://mail-archives.apache.org/mod_mbox/tomcat-dev/</archive>
+    </mailingList>
+  </mailingLists>
+
+  <scm>
+    <connection>scm:git:git://git@github.com/apache/tomcat85.git</connection>
+    <url>https://github.com/apache/tomcat85</url>
+  </scm>
+
+  <issueManagement>
+    <system>Bugzilla</system>
+    <url>https://bz.apache.org/bugzilla/describecomponents.cgi?product=Tomcat%208</url>
+  </issueManagement>
+
+  <properties>
+    <tomcat.version>8.5.13</tomcat.version>
+    <ecj.version>4.6.1</ecj.version>
+    <commons-daemon.version>1.0.15</commons-daemon.version>
+    <log4j.version>2.8.2</log4j.version>
+  </properties>
+
+  <modules>
+    <module>mvn-modules/build</module>
+    <module>mvn-modules/annotations-api</module>
+    <module>mvn-modules/servlet-api</module>
+    <module>mvn-modules/jsp-api</module>
+    <module>mvn-modules/el-api</module>
+    <module>mvn-modules/websocket-api</module>
+    <module>mvn-modules/jaspic-api</module>
+    <module>mvn-modules/tomcat-websocket</module>
+    <module>mvn-modules/bootstrap</module>
+    <module>mvn-modules/tomcat-juli</module>
+    <module>mvn-modules/catalina</module>
+    <module>mvn-modules/catalina-ant</module>
+    <module>mvn-modules/catalina-storeconfig</module>
+    <module>mvn-modules/catalina-ha</module>
+    <module>mvn-modules/catalina-tribes</module>
+    <module>mvn-modules/tomcat-api</module>
+    <module>mvn-modules/tomcat-util</module>
+    <module>mvn-modules/tomcat-util-scan</module>
+    <module>mvn-modules/tomcat-coyote</module>
+    <module>mvn-modules/tomcat-jni</module>
+    <module>mvn-modules/jasper</module>
+    <module>mvn-modules/jasper-el</module>
+    <module>mvn-modules/tomcat-dbcp</module>
+    <module>mvn-modules/tomcat-jdbc</module>
+    <module>mvn-modules/tomcat-i18n-es</module>
+    <module>mvn-modules/tomcat-i18n-fr</module>
+    <module>mvn-modules/tomcat-i18n-ja</module>
+    <module>mvn-modules/embed-core</module>
+    <module>mvn-modules/embed-el</module>
+    <module>mvn-modules/embed-jasper</module>
+    <module>mvn-modules/embed-websocket</module>
+  </modules>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>package</phase>
+            <configuration>
+                <forceCreation>true</forceCreation>
+            </configuration>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>tomcat-build</artifactId>
+        <version>${tomcat.version}</version>
+        <type>pom</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
