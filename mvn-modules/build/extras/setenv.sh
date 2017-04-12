@@ -2,7 +2,7 @@
 # Script to load log4j2 jars and configuration from extras dir
 
 # The log4j2 jars required to run
-LOG4J2_JARS="log4j-core-2.5.0.redhat-2.jar log4j-api-2.5.0.redhat-2.jar log4j-jul-2.5.0.redhat-2.jar"
+LOG4J2_JARS="log4j-core-2.8.3.jar log4j-api-2.8.3.jar log4j-jul-2.8.3.jar"
 # Load LogManager from log4j-jul
 LOGGING_MANAGER="-Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager"
 # Point to extras/log4j2.properties for default properties
