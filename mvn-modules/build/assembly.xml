@@ -24,9 +24,6 @@
       <outputDirectory>/</outputDirectory>
       <includes>
         <include>webapps/docs/appdev/sample/index.html</include>
-        <include>extras/log4j2.properties</include>
-        <!-- example setenv.sh to use log4j2 from extras dir -->
-        <include>extras/setenv.sh</include>
       </includes>
     </fileSet>
   </fileSets>

@@ -64,7 +64,6 @@
     <tomcat.version>8.5.13</tomcat.version>
     <ecj.version>4.6.1</ecj.version>
     <commons-daemon.version>1.0.15</commons-daemon.version>
-    <log4j.version>2.8.2</log4j.version>
   </properties>
 
   <modules>

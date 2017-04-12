@@ -50,21 +50,6 @@
       <artifactId>commons-daemon</artifactId>
       <version>${commons-daemon.version}</version>
     </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>${log4j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-      <version>${log4j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-jul</artifactId>
-      <version>${log4j.version}</version>
-    </dependency>
   </dependencies>
 
   <build>
@@ -126,15 +111,6 @@
                   <target name="package-src-jar"/>
                   <target name="embed-sources"/>
                 </ant>
-
-                <echo message="Copying log4j into extras dir..."/>
-                <property name="extras.dir" value="../../output/build/extras"/>
-                <mkdir dir="${extras.dir}"/>
-                <copy todir="${extras.dir}">
-                  <fileset file="${org.apache.logging.log4j:log4j-core:jar}"/>
-                  <fileset file="${org.apache.logging.log4j:log4j-api:jar}"/>
-                  <fileset file="${org.apache.logging.log4j:log4j-jul:jar}"/>
-                </copy>
               </target>
             </configuration>
 
