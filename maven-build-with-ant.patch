@@ -1,0 +1,13 @@
+Index: build.xml
+===================================================================
+--- build.xml	(revision 1791111)
++++ build.xml	(working copy)
+@@ -194,6 +194,8 @@
+   <!-- Classpaths -->
+   <path id="compile.classpath">
+     <pathelement location="${jdt.jar}"/>
++    <!-- ant.jar reference for maven build to use -->
++    <pathelement location="${ant.jar}"/>
+   </path>
+ 
+   <path id="tomcat.classpath">
