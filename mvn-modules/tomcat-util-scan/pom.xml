@@ -92,7 +92,7 @@
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-build</artifactId>
+      <artifactId>tomcat</artifactId>
       <type>pom</type>
     </dependency>
   </dependencies>

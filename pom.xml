@@ -67,7 +67,7 @@
   </properties>
 
   <modules>
-    <module>mvn-modules/build</module>
+    <module>mvn-modules/tomcat</module>
     <module>mvn-modules/annotations-api</module>
     <module>mvn-modules/servlet-api</module>
     <module>mvn-modules/jsp-api</module>
@@ -126,7 +126,7 @@
     <dependencies>
       <dependency>
         <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-build</artifactId>
+        <artifactId>tomcat</artifactId>
         <version>${tomcat.version}</version>
         <type>pom</type>
       </dependency>
