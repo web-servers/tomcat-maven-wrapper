@@ -31,7 +31,7 @@
   <name>Apache Tomcat Build</name>
 
   <properties>
-    <ant.version>1.9.4</ant.version>
+    <ant.version>1.9.15</ant.version>
   </properties>
 
   <dependencies>
